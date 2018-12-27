@@ -1,12 +1,12 @@
 $(document).ready(function(){
   $('#userAnswers').submit(function(event){
-    var idTags = ['nOne', 'nTwo']
+    var idTags = ['wOne', 'wTwo']
 
-    var userInput = idTags.map(function(idTags){
-      return ($('input#' + idTags).val()) *2;
+    var upperCaseInput = idTags.map(function(idTags){
+      var userInput = $('input#' + idTags).val();
+      return userInput.toUpperCase();
     });
-;
-    $('.mult').text(userInput)
-    event.preventDefault();
+    $('.upperCase').text(upperCaseInput)
+    event.preventDefault()
   });
 });
